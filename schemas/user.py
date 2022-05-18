@@ -3,8 +3,11 @@ from pydantic import BaseModel
 
 class User(BaseModel):
     login: str
-    password: str
     name: str
+
+
+class UserCreate(User):
+    password: str
 
 
 class UserInDB(User):
